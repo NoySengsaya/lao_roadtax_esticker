@@ -116,9 +116,10 @@ class DrawRoadTaxSticker extends RoadTaxDrawer {
       final barcodeWidth = calScaleValue(x: 282, refactor: refactorX).toInt();
       final barcodeHight = calScaleValue(x: 70, refactor: refactorY).toInt();
 
-      final image = img.Image(barcodeWidth, barcodeHight);
+      final image = img.Image(width: barcodeWidth, height: barcodeHight);
 
-      img.fill(image, img.getColor(0, 0, 0, 0));
+      // img.fill(image, img.getColor(0, 0, 0, 0));
+      img.fill(image, color: img.ColorInt32.rgba(0, 0, 0, 0));
 
       barcode_img.drawBarcode(
         image,
